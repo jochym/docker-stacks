@@ -51,8 +51,9 @@ RUN apt-get update \
     sudo \
     locales \
     fonts-liberation \
-    run-one \
  && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+#    run-one \
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen
